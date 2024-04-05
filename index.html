@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Calculadora de juros compostos</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <script src="installments.js"></script>
+    <script src="https://rawgit.com/moment/moment/2.2.1/min/moment.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <script>
+    </script>
+
+</head>
+
+<body>
+
+    <header class="header-page">
+        <h1>Calculadora de juros compostos</h1>
+    </header>
+
+    <div class="inputs-container">
+        <!-- <div class="card-container"> -->
+        <div class="row">
+            <div class="col">
+                <label for="initial-value">Valor inicial</label>
+                <input type="number" id="initial-value" name="initial-value" required>
+            </div>
+            <div class="col">
+                <label for="interest-rate">Taxa de juros</label>
+                <input type="number" id="interest-rate" name="interest-rate" required>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <label for="installment-value">Investimento mensal</label>
+                <input type="number" id="installment-value" name="installment-value" required>
+                <select id="installment-type" name="installment-type">
+                    <option value="mensal">mensal</option>
+                    <option value="trimestral">trimestral</option>
+                    <option value="anual">anual</option>
+
+                </select>
+            </div>
+            <div class="col">
+                <label for="installment-period">Período de investimento</label>
+                <input type="number" id="installment-period" name="installment-period" required>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <label for="compost-type">Tipo de composto</label>
+                <select id="compost-type" name="compost-type">
+                    <option value="diario">diário</option>
+                    <option value="mensal">mensal</option>
+                    <option value="trimestral">trimestral</option>
+                    <option value="semianual">semianual</option>
+                    <option value="anual">anual</option>
+                </select>
+            </div>
+            <div class="col">
+                <label for="date">Data</label>
+                <input type="date" id="date" name="date"  disabled>
+                <!-- inserir data via js -->
+            </div>
+        </div>
+        <div class="row">
+            <div class="bigcol">
+                <button class="button-calc" onclick="calculateInstallments()">Calcular</button>
+            </div>
+        </div>
+        <!-- </div> -->
+    </div>
+</body>
+
+</html>

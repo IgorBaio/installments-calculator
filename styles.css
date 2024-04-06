@@ -1,11 +1,21 @@
 body {
+    --primary-color: #73366F;
+    --white-color: #E3DFE1;
+    --black-color: #29262F;
+    --secondary-color: #A653A0;
+    --contrast-color:  #d98723;
+    --font-family: "Helvetica Garamond Verdana";
+    
+    background: radial-gradient(circle, #f2c849, #f2c344, #f2bf3f, #f2ba3b, #f2b536, #f0af33, #eeaa2f, #eca42c, #e79d2a, #e39527, #de8e25, #d98723);
     position: relative;
 }
 
 .header-page {
-    background-color: #f8f9fa;
+    background: linear-gradient(to right, #73366f, #7f3d7b, #8c4487, #994c93, #a653a0);
+    color: var(--white-color);
+    font-family: var(--font-family);
     padding: 10px;
-    border-bottom: 1px solid #e9ecef;
+    border-bottom: 1px solid var(--black-color);
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -20,8 +30,9 @@ body {
     margin-top: 5%;
     height: 350px;
     width: 80%;
-    background-color: #f8f9fa;
-    box-shadow: 0 0 10px rgba(77, 166, 108, 0.84);
+    background-color: var(--primary-color);
+    /* background: linear-gradient(to left, #73366f, #7f3d7b, #8c4487, #994c93, #a653a0); */
+    box-shadow: 0 0 10px var(--black-color);
     position: absolute;
     left: 10%;
 
@@ -33,7 +44,7 @@ body {
     justify-content: space-evenly;
     width: 100%;
     padding: 0 15px;
-    background-color: red;
+    /* background-color: red; */
     margin: 10px 0;
 }
 
@@ -43,7 +54,11 @@ body {
     justify-content: space-between;
     align-items: center;
     width: 30%;
-    background-color: beige;
+    color: var(--white-color);
+    font-family: var(--font-family);
+    font-weight: bold;
+    /* background-color: beige; */
+    
 }
 
 .bigcol {
@@ -52,7 +67,7 @@ body {
     justify-content: flex-end;
     align-items: center;
     width: 100%;
-    background-color: beige;
+    /* background-color: beige; */
     position: relative;
 }
 
@@ -65,15 +80,22 @@ body {
     position: absolute;
     right: 10%;
     top: 1%;
-    background-color: #8E75EB;
+    background-color: var(--contrast-color);
     border: none;
     border-radius: 20px;
-    color: white;
-    box-shadow: 0 0 10px #8E75EB;
+    color: var(--white-color);
+    font-family: var(--font-family);
+    font-weight: bold;
+    box-shadow: 0 0 5px #f2c849;
+    
 
     &:active {
-        background-color: #B575EB;
+        background-color: var(--secondary-color);
     }
 
     
+}
+
+#date{
+    color: var(--black-color);
 }
